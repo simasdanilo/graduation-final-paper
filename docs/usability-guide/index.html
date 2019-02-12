@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link type="text/css" rel="stylesheet" href="css/main.css" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic|Roboto+Mono:400|Material+Icons" rel="stylesheet">
+  <script>
+  function onClickLink(id) {
+    var link = document.getElementById(id);
+    clearDropdowns();
+    clearLinks();
+    setLinkAsActive(link);
+    showLinkDropdown(link);
+    setHeaderTitle(link);
+  }
+
+  function setHeaderTitle(link){
+    var headerTitle = document.getElementById("headerTitle");
+    headerTitle.innerHTML = link.innerHTML;
+  }
+
+  function clearLinks(){
+    var links = document.getElementsByClassName("link-active");
+    for (var i = 0; i < links.length; i++) {
+      setLinkAsInactive(links[i]);
+    }
+  }
+
+  function clearDropdowns(){
+    var dropdowns = document.getElementsByClassName("dropdown-shown");
+    for (var i = 0; i < dropdowns.length; i++) {
+      hideDropdown(dropdowns[i]);
+    }
+  }
+
+  function showLinkDropdown(link){
+    var id = link.id;
+    var dropdownId = "";
+
+    switch (id) {
+      case "link1":
+      dropdownId = "dropdown1";
+      break;
+      case "link3":
+      dropdownId = "dropdown3";
+      break;
+      case "link4":
+      dropdownId = "dropdown4";
+      break;
+      case "link5":
+      dropdownId = "dropdown5";
+      break;
+      case "link6":
+      dropdownId = "dropdown6";
+      break;
+      case "link7":
+      dropdownId = "dropdown7";
+      break;
+      case "link8":
+      dropdownId = "dropdown8";
+      break;
+      default:
+      dropdownId = null;
+    }
+
+    if (dropdownId != null){
+      var dropdown = document.getElementById(dropdownId)
+      showDropdown(dropdown);
+    }
+  }
+
+  function showDropdown(dropdown){
+    dropdown.className = "dropdown-shown";
+  }
+
+  function hideDropdown(dropdown){
+    dropdown.className = "dropdown-hidden";
+  }
+
+  function setLinkAsActive(link){
+    link.className = "link-active";
+  }
+
+  function setLinkAsInactive(link){
+    link.className = "link-inactive";
+  }
+
+  </script>
+</head>
+<body>
+  <!-- Navigation bar -->
+  <nav>
+    <ul>
+      <li>
+        <span id="navHeader">GUIA</span>
+      </li>
+      <li>
+        <a id="link0" class="link-active" onclick="onClickLink('link0')" href="pages/intro.html" target="pageContainer">Introdução</a>
+        <hr/>
+      </li>
+      <li><a id="link1" class="link-inactive" onclick="onClickLink('link1')" href="pages/visibility.html" target="pageContainer">Visibilidade e status do sistema</a></li>
+      <li id="dropdown1" class="dropdown-hidden">
+        <ul class="bookmarks" >
+          <li><a href="pages/visibility.html#navigation" target="pageContainer">Navegação</a></li>
+          <li><a href="pages/visibility.html#gestures" target="pageContainer">Gestos</a></li>
+          <li><a href="pages/visibility.html#feedback" target="pageContainer">Feedback</a></li>
+          <li><a href="pages/visibility.html#recognition" target="pageContainer">Reconhecimento</a></li>
+          <li><a href="pages/visibility.html#animation" target="pageContainer">Animação & transição</a></li>
+          <li><a href="pages/visibility.html#loading" target="pageContainer">Carregamento</a></li>
+          <li><a href="pages/visibility.html#emptyState" target="pageContainer">Estado vazio</a></li>
+        </ul>
+      </li>
+
+      <li><a id="link2" class="link-inactive" onclick="onClickLink('link2')" href="pages/controlFreedom.html" target="pageContainer">Controle e liberdade do usuário</a></li>
+
+      <li><a id="link3" class="link-inactive" onclick="onClickLink('link3')" href="pages/consistencyStandard.html" target="pageContainer">Padrão e consistência</a></li>
+      <li id="dropdown3" class="dropdown-hidden">
+        <ul class="bookmarks" >
+          <li><a href="pages/consistencyStandard.html#gestures" target="pageContainer">Gestos</a></li>
+        </ul>
+      </li>
+
+      <li><a id="link4" class="link-inactive" onclick="onClickLink('link4')" href="pages/errorPrevention.html" target="pageContainer">Prevenção de erros</a></li>
+      <li id="dropdown4" class="dropdown-hidden">
+        <ul class="bookmarks" >
+          <li><a href="pages/errorPrevention.html#acknowledgment" target="pageContainer">Confirmação</a></li>
+        </ul>
+      </li>
+
+      <li><a id="link5" class="link-inactive" onclick="onClickLink('link5')" href="pages/flexibilityEfficiency.html" target="pageContainer">Flexibilidade e eficiência de uso</a></li>
+      <li id="dropdown5" class="dropdown-hidden">
+        <ul class="bookmarks" >
+          <li><a href="pages/flexibilityEfficiency.html#dataEntry" target="pageContainer">Entrada de dados</a></li>
+          <li><a href="pages/flexibilityEfficiency.html#filterSort" target="pageContainer">Filtro e ordenação</a></li>
+          <li><a href="pages/flexibilityEfficiency.html#search" target="pageContainer">Busca</a></li>
+          <li><a href="pages/flexibilityEfficiency.html#gestures" target="pageContainer">Gestos</a></li>
+        </ul>
+      </li>
+
+      <li><a id="link6" class="link-inactive" onclick="onClickLink('link6')" href="pages/aestheticMinimalistDesign.html" target="pageContainer">Estética e design minimalista</a></li>
+      <li id="dropdown6" class="dropdown-hidden">
+        <ul class="bookmarks" >
+          <li><a href="pages/aestheticMinimalistDesign.html#touchTargetSize" target="pageContainer">Tamanho da área de toque</a></li>
+          <li><a href="pages/aestheticMinimalistDesign.html#colorBranding" target="pageContainer">Cor e marca</a></li>
+        </ul>
+      </li>
+
+      <li><a id="link7" class="link-inactive" onclick="onClickLink('link7')" href="pages/recognizeDiagnoseRecoverErrors.html" target="pageContainer">Reconhecer, diagnosticar e recuperar erros</a></li>
+      <li id="dropdown7" class="dropdown-hidden">
+        <ul class="bookmarks" >
+          <li><a href="pages/recognizeDiagnoseRecoverErrors.html#connectivity" target="pageContainer">Conectividade</a></li>
+          <li><a href="pages/recognizeDiagnoseRecoverErrors.html#offlineByChoice" target="pageContainer">Offline por escolha</a></li>
+        </ul>
+      </li>
+
+      <li><a id="link8" class="link-inactive" onclick="onClickLink('link8')" href="pages/helpDocumentation.html" target="pageContainer">Ajuda e documentação</a></li>
+      <li id="dropdown8" class="dropdown-hidden">
+        <ul class="bookmarks" >
+          <li><a href="pages/helpDocumentation.html#gestureLearning" target="pageContainer">Ensinando gestos</a></li>
+          <li><a href="pages/helpDocumentation.html#firstTimeExperience" target="pageContainer">Experiência de primeira vez</a></li>
+        </ul>
+      </li>
+      <li>
+        <hr/>
+        <a id="link9" class="link-inactive" onclick="onClickLink('link9')" href="pages/references.html" target="pageContainer">Referências</a>
+      </li>
+    </ul>
+  </nav>
+  <!-- Main content -->
+  <header>
+    <h3 id="headerTitle">Introdução</h3>
+  </header>
+  <main>
+    <iFrame name="pageContainer" src="pages/intro.html"/>
+  </main>
+</body>
+</html>

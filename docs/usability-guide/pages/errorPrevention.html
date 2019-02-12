@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link type="text/css" rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+  <main>
+    <h1>Prevenção de erros</h1>
+    <article>
+      <p>Erros ocorrem quando seu aplicativo não consegue completar uma ação ou quando o resultado de uma ação do usuário não corresponde ao resultado esperado. Assegure-se de que o seu aplicativo seja a prova de erros tanto quanto possível. Projete seu aplicativo para interrupções e para uma atenção fragmentada do usuário.</p>
+      <p>Minimize erros criando aplicativos que facilitam a entrada de informações de forma flexível. Os aplicativos devem aceitar formatos de dados comuns que usam recursos para evitar erros e melhorar a compreensão do usuário, como é o caso das máscaras de texto.</p>
+      <div class="illustration" style="width: 360px">
+        <img src="images/img-19.png"/>
+        <span class="illustration-subtitle">Uma máscara de texto é utilizada para o campo "telefone".</span>
+      </div>
+      <p>Inclua restrições quando for conveniente limitar as opções do usuário até que uma ação seja tomada ou o estado atual mude para um estado aceitável, como por exemplo você pode bloquear o botão de envio de um formulário até que o erro informado seja consertado.</p>
+      <div class="illustration" style="width: 360px">
+        <img src="images/img-20.png"/>
+        <span class="illustration-subtitle">Um número de telefone inválido faz o botão "REGISTRAR" permanecer desabilitado até que um número de telefone válido seja inserido.</span>
+      </div>
+      <p>Valorize as ações do usuário guardando os estados e salvando as informações inseridas por ele. Caso um erro ocorra faça com que seu aplicativo seja capaz de  retornar ao último estado estável ou recuperar as informações salvas. </p>
+      <div class="illustration" style="width: 360px">
+        <img src="images/img-21.png"/>
+        <span class="illustration-subtitle">Uma mensagem que não foi enviada é salva como rascunho para ser enviada depois, caso o usuário assim deseje.</span>
+      </div>
+      <p>Projete seu aplicativo considerando cenários prováveis como: instabilidade na conexão, acabar a bateria do dispositivo, o dispositivo ser desligado ou o usuário realizar uma ação indesejada.</p>
+    </article>
+    <hr/>
+    <article>
+      <h2 id="acknowledgment" class="title">Confirmação</h2>
+      <p> Confirmar envolve pedir ao usuário que verifique se ele deseja prosseguir com uma determinada ação. A confirmação ajuda a evitar que os usuários cometam erros dos quais possam se arrepender.</p>
+      <p>A confirmação não é necessária quando as consequências de uma ação são reversíveis ou desprezíveis. Por exemplo, se uma marca de seleção mostrar que uma imagem foi selecionada, a confirmação adicional é desnecessária.</p>
+      <div class="illustration" style="width: 360px">
+        <img src="images/img-22.png"/>
+        <span class="illustration-subtitle">Selecionando múltiplos itens em uma lista.</span>
+      </div>
+      <p>Avise sobre consequências perigosas e confirme ações destrutivas. Use diálogos para confirmar ações do usuário difíceis de desfazer ou que são destrutivas, como as ações de "Excluir" ou "Remover".</p>
+      <div class="illustration" style="width: 360px">
+        <img src="images/img-23.png"/>
+        <span class="illustration-subtitle">Um diálogo pede uma confirmação para excluir os itens selecionados.</span>
+      </div>
+    </article>
+  </main>
+  <footer/>
+</body>
+</html>

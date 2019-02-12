@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link type="text/css" rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+  <main>
+      <h1>Reconhecer, diagnosticar e recuperar erros</h1>
+      <article>
+        <p>Para tratar erros:
+          <ul>
+            <li>Comunique claramente o que está acontecendo</li>
+            <li>Descreva como o usuário pode resolvê-lo</li>
+            <li>Preserve o quanto possível os dados introduzidos pelo usuário (preserve o estado do usuário)</li>
+          </ul>
+        </p>
+        <p>Caso um erro ocorra , esclareça o motivo e a origem do erro. Exiba mensagens de erro em uma linguagem familiar ao usuário, indicando o problema de forma precisa e sugerindo uma solução construtiva. Para corrigir ou contornar o erro forneça instruções claras e evite os detalhes técnicos.</p>
+        <div class="illustration" style="width: 360px">
+          <img src="images/img-35.png"/>
+          <span class="illustration-subtitle"> Um diálogo informa de forma clara o erro ocorrido, sugere uma solução e fornece um botão para levar o usuário a solução.</span>
+        </div>
+        <p>As mensagens de erro devem ser escritas de modo que o usuário não se sinta sob pressão e não se sinta culpado. Use frases curtas com palavras simples, uma vez que as pessoas provavelmente ignorarão frases longas. Faça com que seu texto seja simples, conciso e direto. Além também de ser legível e ter um contraste notável com a cor de fundo.</p>
+        <p>Se apropriado, apresente um link para ajudar um usuário a solucionar ou contornar o erro. Apenas ofereça links que você possa dar suporte. Por exemplo, não ofereça uma opção como "Tentar novamente" nos casos em que você possa detectar que a operação falhará.</p>
+        <div class="illustration" style="width: 360px">
+          <img src="images/img-36.png"/>
+          <span class="illustration-subtitle">Uma mensagem é disposta informando que não foi possível realizar a ação de sincronizar as receitas do usuário e lhe fornece um botão para tentar sincronizar novamente.</span>
+        </div>
+        <p>Valide dinamicamente os valores dos campos em entradas de textos. É frustrante quando você tem que voltar e corrigir erros depois de preencher um longo formulário. Sempre que possível verifique os valores do campo imediatamente após a entrada dos dados para que os usuários possam corrigi-los imediatamente.</p>
+        <div class="illustration" style="width: 360px">
+          <img src="images/img-37.png"/>
+          <span class="illustration-subtitle">Uma mensagem de erro informa ao usuário que o e-mail que está sendo digitado é inválido.</span>
+        </div>
+      </article>
+      <hr/>
+      <article>
+        <h2 id="connectivity" class="title">Conectividade</h2>
+        <p>Tenha em mente a instabilidade da conexão durante todo o desenvolvimento de seu aplicativo. Quando não há conexão ou não for possível carregar o conteúdo, o usuário deve poder interagir com o máximo possível do resto do aplicativo.</p>
+      </article>
+      <hr/>
+      <article>
+        <h2 id="offlineByChoice" class="title">Offline por escolha</h2>
+        <p>Exiba um indicador discreto e persistente quando os usuários estiverem off-line e tentarem fazer tarefas que exijam estar online. Como por exemplo:</p>
+          <ul>
+            <li>Fazer uma chamada no modo avião</li>
+            <li>Baixar um conteúdo para o dispositivo enquanto offline</li>
+          </ul>
+        </p>
+        <div class="illustration" style="width: 360px">
+          <img src="images/img-38.png"/>
+          <span class="illustration-subtitle">Uma mensagem fixa no rodapé do aplicativo indica ao usuário que ele está navegando no modo offline e uma ação "Desativar" é oferecida para deixar esse estado.</span>
+        </div>
+      </article>
+  </main>
+  <footer/>
+</body>
+</html>
