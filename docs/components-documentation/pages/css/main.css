@@ -1,0 +1,149 @@
+html, body {
+  font-family: Roboto,sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fafafa;
+  overflow: auto;
+}
+
+footer{
+  padding-top: 200px;
+}
+
+main{
+  height:100%;
+  max-width: 1000px;
+  padding-left: 112px;
+  padding-right: 112px;
+  margin-top: 0px;
+  margin: 0 auto;
+  overflow: auto;
+}
+
+main h1 {
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 40px;
+  padding-top: 88px;
+  margin: 0;
+  color: #3949ab;
+}
+
+article h2 {
+  margin: 0;
+  padding-top: 32px;
+  padding-bottom: 16px;
+  font-size: 24px;
+  line-height: 32px;
+  overflow: hidden;
+}
+
+article h3 {
+  margin: 0;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  line-height: 32px;
+  font-weight: 400;
+  overflow: hidden;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #515151;
+}
+
+p#intro {
+  font-size: 20px;
+  line-height: 32px;
+}
+
+article{
+}
+
+article li{
+  padding-bottom: 12px;
+}
+
+img {
+}
+
+hr {
+  height: 1px;
+  margin-top: 48px;
+  border: 0;
+  background: #000;
+  opacity: 0.12;
+}
+
+.illustration{
+  display: inline-block; */
+  width: 360px;
+  margin-top: 16px;
+  margin-right: 32px;
+  margin-bottom: 16px;
+  margin-bottom: 32px;
+}
+
+.illustration-subtitle{
+  display: block;
+  padding: 0;
+  margin-top: 16px;
+  opacity: 0.7;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+a {
+  color: #039BE5;
+  text-decoration: none;
+}
+
+code {
+  color: #515151;
+  font: 13px/18px Consolas, "Liberation Mono", Menlo, Monaco, Courier, monospace;
+}
+
+#methods {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #f7f7f7;
+}
+
+#methods code{
+  color: #060;
+}
+
+#methods p {
+  margin: 0;
+  font-size: 1em;
+  color: rgba(0, 0, 0, .68);
+  font: 14px/24px Roboto, sans-serif;
+}
+
+#methods td, #methods th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#methods caption {
+    padding-left: 8px;
+	padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #999;
+    color: white;
+}
+
+#methods th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}

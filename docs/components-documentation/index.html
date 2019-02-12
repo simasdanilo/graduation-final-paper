@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link type="text/css" rel="stylesheet" href="css/main.css" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic|Roboto+Mono:400|Material+Icons" rel="stylesheet">
+  <script>
+  function onClickLink(id) {
+    var link = document.getElementById(id);
+    clearDropdowns();
+    clearLinks();
+    setLinkAsActive(link);
+    setHeaderTitle(link);
+  }
+
+  function setHeaderTitle(link){
+    var headerTitle = document.getElementById("headerTitle");
+    headerTitle.innerHTML = link.innerHTML;
+  }
+
+  function clearLinks(){
+    var links = document.getElementsByClassName("link-active");
+    for (var i = 0; i < links.length; i++) {
+      setLinkAsInactive(links[i]);
+    }
+  }
+
+  function clearDropdowns(){
+    var dropdowns = document.getElementsByClassName("dropdown-shown");
+    for (var i = 0; i < dropdowns.length; i++) {
+      hideDropdown(dropdowns[i]);
+    }
+  }
+
+  function showLinkDropdown(link){
+    var id = link.id;
+    var dropdownId = null;
+
+    switch (id) {
+      case "link1":
+      dropdownId = "dropdown1";
+      break;
+      case "link2":
+      dropdownId = "dropdown3";
+      break;
+      default:
+      dropdownId = null;
+    }
+
+    if (dropdownId != null){
+      var dropdown = document.getElementById(dropdownId)
+      showDropdown(dropdown);
+    }
+  }
+
+  function showDropdown(dropdown){
+    dropdown.className = "dropdown-shown";
+  }
+
+  function hideDropdown(dropdown){
+    dropdown.className = "dropdown-hidden";
+  }
+
+  function setLinkAsActive(link){
+    link.className = "link-active";
+  }
+
+  function setLinkAsInactive(link){
+    link.className = "link-inactive";
+  }
+
+  </script>
+</head>
+<body>
+  <!-- Navigation bar -->
+  <nav>
+    <ul>
+      <li>
+        <span id="navHeader">COMPONENTES</span>
+      </li>
+      <li>
+        <a id="link0" class="link-active" onclick="onClickLink('link0')" href="pages/intro.html" target="pageContainer">Introdução</a>
+        <hr/>
+      </li>
+      <li><a id="link1" class="link-inactive" onclick="onClickLink('link1')" href="pages/imageButton.html" target="pageContainer">LiloImageButton</a></li>
+      <li><a id="link2" class="link-inactive" onclick="onClickLink('link2')" href="pages/recyclerView.html" target="pageContainer">LiloRecyclerView</a></li>
+      <li>
+        <hr/>
+        <a id="link3" class="link-inactive" onclick="onClickLink('link3')" href="pages/references.html" target="pageContainer">Referências</a>
+      </li>
+    </ul>
+  </nav>
+  <!-- Main content -->
+  <header>
+    <h3 id="headerTitle">Introdução</h3>
+  </header>
+  <main>
+    <iFrame name="pageContainer" src="pages/intro.html"/>
+  </main>
+</body>
+</html>
