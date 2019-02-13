@@ -17,8 +17,8 @@ Com a popularização dos smartphones também cresce o número de aplicativos di
 
 * [Monografia](final-paper.pdf)
 
-* [Guia](docs/usability-guide)
+* [Guia](https://simasdanilo.github.io/graduation-final-paper/usability-guide/index.html)
 
 * [Componentes](components/)
 
-* [Documentação dos componentes](docs/components-documentation)
+* [Documentação dos componentes](https://simasdanilo.github.io/graduation-final-paper/components-documentation/index.html)
